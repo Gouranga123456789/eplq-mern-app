@@ -50,3 +50,26 @@
       </tr>
     </tbody>
   </table>
+<h4></h4>Workflow: How It Works</h4>
+<p>The core privacy-preserving workflow is as follows:</p>
+<ol>
+<li>Admin Uploads: An Admin logs in and navigates to the Admin Dashboard. They fill out a form with "City Hospital", its latitude, and its longitude.
+</li>
+<li>Server Encrypts: The backend Express server receives this data.
+<ul>
+<li>It encrypts the sensitive name: "City Hospital" becomes "U2FsdG...=".</li>
+
+<li>It stores the encrypted name and a native GeoJSON Point in the MongoDB pois collection.</li> </ul>
+</li>
+<li>User Searches: A User logs in and goes to their dashboard. They click on the map or enter coordinates to search.
+</li>
+<li>Server Queries & Decrypts: The backend receives the user's coordinates and radius.
+<ul>
+<li>It performs a geospatial query ($near) to find all documents within that radius.</li>
+
+<li>It decrypts the encryptedName for each matching document.</li>
+
+<li>It sends the plain text (decrypted) results back to the user's browser.</li> </ul>
+</ol>
+
+<p>Privacy is preserved because the sensitive data is never stored in plain text, and the search logic is handled entirely on the server.</p>
