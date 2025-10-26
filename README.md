@@ -81,49 +81,38 @@
 <li>MongoDB Atlas Account (a free M0 cluster is sufficient)</li> </ul></p>
 <ol>
   <li>Clone the Repository</li>
-  <p>git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
-  cd eplq-mern-app</p>
+  ```bash
+  git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
+  cd eplq-mern-app
+  ```
   <li>Backend Setup</li>
-  <p>
-  1. Navigate to the backend folder 
-## 🏃‍♂️ Execution: Getting Started Locally
-
-1. Run the Backend Server 🛠️
-(Open your first terminal)
-```bash
+  ```bash
 # 1. Navigate to the backend folder
 cd backend
 
-# 2. Install dependencies (only once)
+# 2. Install dependencies
 npm install
 
-# 3. Start the server
+# 3. Create your .env file
+#    Create a file named ".env" in the /backend folder
+#    and paste the following inside:
+
+PORT=5001
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=a_very_strong_and_long_secret_key
+ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes
+
+# 4. Get your MONGO_URI
+#    - Log in to MongoDB Atlas.
+#    - Create a new M0 cluster.
+#    - Go to "Network Access" and click "Allow Access from Anywhere" (0.0.0.0/0).
+#    - Go to "Database Access" and create a database user (e.g., user: "eplq", pass: "mypassword").
+#    - Click "Connect" -> "Drivers" and copy the connection string.
+#    - Paste it into your .env file, replacing <username> and <password>.
+
+# 5. Start the backend server
 npm run dev
 ```
- 2. Install dependencies <br>
- 
-npm install  <br>
-
-# 3. Create your .env file  <br>
-#    Create a file named ".env" in the /backend folder  <br>
-#    and paste the following inside:  <br>
-
-PORT=5001  <br>
-MONGO_URI=your_mongodb_connection_string   <br>
-JWT_SECRET=a_very_strong_and_long_secret_key   <br>
-ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes   <br>
-
-# 4. Get your MONGO_URI  <br>
-#    - Log in to MongoDB Atlas.    <br>
-#    - Create a new M0 cluster.   <br>
-#    - Go to "Network Access" and click "Allow Access from Anywhere" (0.0.0.0/0).   <br>
-#    - Go to "Database Access" and create a database user (e.g., user: "eplq", pass: "mypassword").   <br>
-#    - Click "Connect" -> "Drivers" and copy the connection string.   <br>
-#    - Paste it into your .env file, replacing <username> and <password>.  <br>
-
-# 5. Start the backend server  <br>
-npm run dev ```
-  </p>
 <li>Frontend Setup</li>
 <p>
   # 1. Open a NEW terminal <br>
