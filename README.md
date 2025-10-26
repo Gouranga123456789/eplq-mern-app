@@ -1,4 +1,4 @@
-<h3>EPLQ: Efficient Privacy-Preserving Location-Based Query</h3>
+<h2>EPLQ: Efficient Privacy-Preserving Location-Based Query</h2>
 <p>
   This project is a full-stack MERN application that implements the "EPLQ" concept, a solution for Efficient Privacy-Preserving Location-Based Queries. </p>
 
@@ -13,5 +13,40 @@
   <li><b>Interactive Map:</b> Features a Leaflet.js and OpenStreetMap interface (no API keys required) to visually select search locations.</li>
   <li><b>Role-Based Access:</b> Secure frontend and backend routes using JWT, differentiating between User and Admin roles.</li>
   <li><b>Fully Responsive:</b> A modern, mobile-first design with a hamburger menu for all devices. </li>
-  
 </ul>
+<h4>Technologies Used</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Technology</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Frontend</td>
+        <td>React.js (with Vite), React Router, Leaflet.js, Axios</td>
+      </tr>
+      <tr>
+        <td>Backend</td>
+        <td>Node.js, Express.js</td>
+      </tr>
+      <tr>
+        <td>Database</td>
+        <td>MongoDB (with MongoDB Atlas)</td>
+      </tr>
+      <tr>
+        <td>Authentication</td>
+        <td>JSON Web Tokens (JWT), bcrypt.js</td>
+      </tr>
+      <tr>
+        <td>Encryption</td>
+        <td>crypto-js (AES)</td>
+      </tr>
+      <tr>
+        <td>ODM</td>
+        <td>mongoose</td>
+      </tr>
+    </tbody>
+  </table>
