@@ -85,10 +85,12 @@
   cd eplq-mern-app</p>
   <li>Backend Setup</li>
   <p>
-    ``` #1. Navigate to the backend folder <br>
+  1. Navigate to the backend folder 
+  ```
 cd backend<br>
-
-# 2. Install dependencies <br>
+```
+ 2. Install dependencies <br>
+ 
 npm install  <br>
 
 # 3. Create your .env file  <br>
