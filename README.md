@@ -85,7 +85,7 @@
   cd eplq-mern-app</p>
   <li>Backend Setup</li>
   <p>
-    # 1. Navigate to the backend folder <br>
+    ``` #1. Navigate to the backend folder <br>
 cd backend<br>
 
 # 2. Install dependencies <br>
@@ -109,7 +109,7 @@ ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes   <br>
 #    - Paste it into your .env file, replacing <username> and <password>.  <br>
 
 # 5. Start the backend server  <br>
-npm run dev
+npm run dev ```
   </p>
 <li>Frontend Setup</li>
 <p>
