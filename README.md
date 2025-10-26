@@ -79,8 +79,7 @@
   <ul>
 <li>Node.js (v18 or higher)</li>
 <li>MongoDB Atlas Account (a free M0 cluster is sufficient)</li> </ul></p>
-<ol>
-  <li>Clone the Repository</li>
+### 1.Clone the Repository
 ```bash
 git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
 cd eplq-mern-app
