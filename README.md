@@ -81,12 +81,12 @@
 <li>MongoDB Atlas Account (a free M0 cluster is sufficient)</li> </ul></p>
 <ol>
   <li>Clone the Repository</li>
-  ```bash
-  git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
-  cd eplq-mern-app
-  ```
+```bash
+git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
+cd eplq-mern-app
+```
   <li>Backend Setup</li>
-  ```bash
+  
 # 1. Navigate to the backend folder
 cd backend
 
@@ -112,7 +112,6 @@ ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes
 
 # 5. Start the backend server
 npm run dev
-```
 <li>Frontend Setup</li>
 <p>
   # 1. Open a NEW terminal <br>
