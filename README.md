@@ -99,6 +99,7 @@ npm install
 
 # 3. Start the server
 npm run dev
+```
  2. Install dependencies <br>
  
 npm install  <br>
