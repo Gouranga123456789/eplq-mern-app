@@ -79,13 +79,17 @@
   <ul>
 <li>Node.js (v18 or higher)</li>
 <li>MongoDB Atlas Account (a free M0 cluster is sufficient)</li> </ul></p>
-### 1.Clone the Repository
-```bash
+<ol>
+<li>Clone the Repository</li>
+
+  
+```
 git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
 cd eplq-mern-app
 ```
-  <li>Backend Setup</li>
-  
+<li>Backend Setup</li>
+
+```
 # 1. Navigate to the backend folder
 cd backend
 
@@ -111,9 +115,11 @@ ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes
 
 # 5. Start the backend server
 npm run dev
+```
 <li>Frontend Setup</li>
-<p>
-  # 1. Open a NEW terminal <br>
+
+```
+# 1. Open a NEW terminal <br>
 # 2. Navigate to the frontend folder  <br>
 cd frontend  <br>
 # 3. Install dependencies <br>
@@ -121,7 +127,7 @@ npm install <br>
 
 # 4. Start the frontend dev server  <br>
 npm run dev
-</p> 
+```
 <li>How to Use the App</li>
 <ul>
   <li>Open http://localhost:5173 in your browser.</li>
