@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #2d3436;
+  line-height: 1.6;
+}
+
+/* Set min-height for footer to work */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1; 
+  padding-top: 2rem; 
+  overflow-x: hidden; 
+}
+
+/* Base animation for all pages */
+.container,
+.homepage-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Main Content Container (for dashboards) --- */
+.container {
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
+  padding: 0 2rem; /* Padding is now on the sides */
+}
+
+/* Container for static pages like About/Contact */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-top: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #6c5ce7, #4a69bd);
+}
+
+/* --- Form & Input Styles --- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+/* --- Button Styles  --- */
+button {
+  background: linear-gradient(to right, #6c5ce7, #4a69bd);
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: #747d8c;
+}
+.btn-secondary:hover {
+  background: #57606f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Dashboard Layout Styles --- */
+.dashboard-layout {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 2rem;
+}
+
+/* Main column (form + results) */
+.dashboard-main {
+  flex: 1.5; 
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+.dashboard-form-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #6c5ce7; 
+}
+
+/* Map column  */
+.map-container {
+  flex: 1; 
+  min-width: 300px;
+  height: 550px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  position: sticky; 
+  top: 100px; 
+}
+
+/* --- Messages & Results --- */
+.error-msg {
+  color: #e74c3c;
+  font-weight: 500;
+  text-align: center;
+  background: #fbebeb;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.success-msg {
+  color: #27ae60;
+  font-weight: 500;
+  text-align: center;
+  background: #e9f7ef;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.results-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.result-item {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.result-item strong {
+  color: #6c5ce7;
+  font-size: 1.1rem;
+}
+
+/* --- Loaders --- */
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.page-loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #6c5ce7;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Media Query for Dashboard/Pages --- */
+@media screen and (max-width: 960px) {
+  .container {
+    padding: 0 1.5rem; 
+  }
+
+  .dashboard-layout {
+    flex-direction: column; 
+  }
+
+  .dashboard-main {
+    min-width: 100%;
+  }
+
+  .map-container {
+    position: static; 
+    height: 400px; 
+    min-width: 100%;
+  }
+}
