@@ -84,7 +84,7 @@
 
   
 ```
-git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
+git clone https://github.com/Gouranga123456789/eplq-mern-app.git
 cd eplq-mern-app
 ```
 <li>Backend Setup</li>
@@ -119,13 +119,13 @@ npm run dev
 <li>Frontend Setup</li>
 
 ```
-# 1. Open a NEW terminal <br>
-# 2. Navigate to the frontend folder  <br>
-cd frontend  <br>
-# 3. Install dependencies <br>
-npm install <br>
+# 1. Open a NEW terminal
+# 2. Navigate to the frontend folder
+cd frontend
+# 3. Install dependencies
+npm install
 
-# 4. Start the frontend dev server  <br>
+# 4. Start the frontend dev server
 npm run dev
 ```
 <li>How to Use the App</li>
@@ -141,3 +141,24 @@ npm run dev
   <li>Search for the POI you created. The results will appear below the form.</li>
 </ul>
 </ol>
+<h4>Project Modules</h4>
+<p>This project is divided into two main user-facing modules as specified in the project brief</p>
+<ul>
+  <li>
+    ADMIN
+    <ul>
+      <li>Register & Login </li>
+      <li>Upload POI Data (Encrypted) </li>
+      <li>View Interactive Map</li>
+    </ul>
+  </li>
+  <li>
+    USER
+    <ul>
+      <li>Register & Login </li>
+      <li>Search for POIs by location and radius</li>
+      <li>View results on the map</li>
+      <li>View decrypted POI information</li>
+    </ul>
+  </li>
+</ul>
