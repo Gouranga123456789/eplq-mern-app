@@ -88,7 +88,7 @@
   1. Navigate to the backend folder 
 ## 🏃‍♂️ Execution: Getting Started Locally
 
-### 1. Run the Backend Server 🛠️
+1. Run the Backend Server 🛠️
 (Open your first terminal)
 ```bash
 # 1. Navigate to the backend folder
