@@ -86,9 +86,19 @@
   <li>Backend Setup</li>
   <p>
   1. Navigate to the backend folder 
-```
+## 🏃‍♂️ Execution: Getting Started Locally
+
+### 1. Run the Backend Server 🛠️
+(Open your first terminal)
+```bash
+# 1. Navigate to the backend folder
 cd backend
-```
+
+# 2. Install dependencies (only once)
+npm install
+
+# 3. Start the server
+npm run dev
  2. Install dependencies <br>
  
 npm install  <br>
