@@ -86,8 +86,8 @@
   <li>Backend Setup</li>
   <p>
   1. Navigate to the backend folder 
-  ```
-cd backend<br>
+```
+cd backend
 ```
  2. Install dependencies <br>
  
