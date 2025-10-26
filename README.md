@@ -73,3 +73,65 @@
 </ol>
 
 <p>Privacy is preserved because the sensitive data is never stored in plain text, and the search logic is handled entirely on the server.</p>
+<h4>Execution: Getting Started Locally</h4>
+<p>Follow these steps to run the project on your local machine.</p>
+<p>Prerequisites 
+  <ul>
+<li>Node.js (v18 or higher)</li>
+<li>MongoDB Atlas Account (a free M0 cluster is sufficient)</li> </ul></p>
+<ol>
+  <li>Clone the Repository</li>
+  <p>git clone https://github.com/Gouranga123456789/eplq-mern-app.git<br>
+  cd eplq-mern-app</p>
+  <li>Backend Setup</li>
+  <p>
+    # 1. Navigate to the backend folder <br>
+cd backend<br>
+
+# 2. Install dependencies <br>
+npm install  <br>
+
+# 3. Create your .env file  <br>
+#    Create a file named ".env" in the /backend folder  <br>
+#    and paste the following inside:  <br>
+
+PORT=5001  <br>
+MONGO_URI=your_mongodb_connection_string   <br>
+JWT_SECRET=a_very_strong_and_long_secret_key   <br>
+ENCRYPTION_KEY=another_strong_32_byte_secret_key_for_aes   <br>
+
+# 4. Get your MONGO_URI  <br>
+#    - Log in to MongoDB Atlas.    <br>
+#    - Create a new M0 cluster.   <br>
+#    - Go to "Network Access" and click "Allow Access from Anywhere" (0.0.0.0/0).   <br>
+#    - Go to "Database Access" and create a database user (e.g., user: "eplq", pass: "mypassword").   <br>
+#    - Click "Connect" -> "Drivers" and copy the connection string.   <br>
+#    - Paste it into your .env file, replacing <username> and <password>.  <br>
+
+# 5. Start the backend server  <br>
+npm run dev
+  </p>
+<li>Frontend Setup</li>
+<p>
+  # 1. Open a NEW terminal <br>
+# 2. Navigate to the frontend folder  <br>
+cd frontend  <br>
+# 3. Install dependencies <br>
+npm install <br>
+
+# 4. Start the frontend dev server  <br>
+npm run dev
+</p> 
+<li>How to Use the App</li>
+<ul>
+  <li>Open http://localhost:5173 in your browser.</li>
+  <li>Click "Login" and then "Switch to Register".</li>
+  <li>Register your FIRST user (e.g., admin@eplq.com). Per the backend logic, the first user to register is automatically made an Admin.</li>
+  <li>You will be prompted to log in. Log in as the Admin. You will be redirected to the Admin Dashboard.</li>
+  <li>Upload a new POI using the form and map.</li>
+  <li>Log out.</li>
+  <li>Register a SECOND user (e.g., user@eplq.com). This will be a normal User.</li>
+  <li>Log in as the User. You will be redirected to the User Dashboard.</li>
+  <li>Search for the POI you created. The results will appear below the form.</li>
+</ul>
+</ol>
