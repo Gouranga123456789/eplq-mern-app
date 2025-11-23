@@ -1,10 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 
-// --- HARDCODED CONFIGURATION FOR SUBMISSION ---
-// Setting these process.env variables manually so the app runs 
-// without needing a .env file.
-
 process.env.PORT = "5001";
 
 process.env.MONGO_URI = "mongodb+srv://gourangakalita17_db_user:YMVVswd4DJbEt15F@cluster0.ritfqm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -13,21 +9,15 @@ process.env.JWT_SECRET = "3dbad60fceabf0930b643187f27d193f19038b7c8e686ac99d3209
 
 process.env.ENCRYPTION_KEY = "e5ab214f08b35339b8a577a04f6b29441f26a1ee70523594474a50e17314b477ccf5afaf7c32e6acc36e17ae9ec11ea60adefdecf1d7eb66d7beb6515d9946ca";
 
-// ---------------------------------------------------------
-
-// Import DB connection (Must happen AFTER setting process.env.MONGO_URI)
 const connectDB = require('./db');
 
-// Connect to Database
 connectDB();
 
 const app = express();
 
-// Init Middleware
-app.use(cors()); // Allow cross-origin requests
-app.use(express.json()); // Allow us to accept JSON data
+app.use(cors()); 
+app.use(express.json());
 
-// Define Routes
 app.get('/', (req, res) => res.send('EPLQ API Running'));
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/pois', require('./routes/poi.routes'));
